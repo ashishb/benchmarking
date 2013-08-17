@@ -1,0 +1,12 @@
+message Student  {
+	required int32 id = 1;
+ 	required string first_name = 2;
+	required string last_name = 3;
+	optional string comments = 4;
+	repeated Course courses = 5;
+}; 
+
+message Course {
+	required string name = 1;
+	optional int32 marks = 2;
+}
