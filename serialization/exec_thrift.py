@@ -29,6 +29,7 @@ def getNewStudent(i, num_courses):
 
 
 def serialize(student):
+	student.validate()
 	transport_out = TTransport.TMemoryBuffer()
 	protocol_out = TBinaryProtocol.TBinaryProtocol(transport_out)
 	student.write(protocol_out)
