@@ -1,8 +1,13 @@
+import os
 import random
+import sys
 
+sys.path.append(os.path.join(os.getcwd(), 'gen-py'))
 from thrift.protocol import TBinaryProtocol
 from thrift.transport import TTransport
 
+# Generated using 
+# thrift -o . --gen py:new_style student.thrift 
 from student.ttypes import Course
 from student.ttypes import Student
 
