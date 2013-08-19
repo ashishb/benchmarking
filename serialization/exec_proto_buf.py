@@ -1,4 +1,7 @@
 import random
+
+# This was generated using
+# protoc student.proto --python_out=.
 from student_pb2 import Student
 
 

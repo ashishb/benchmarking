@@ -24,7 +24,7 @@ def getNewStudent(i, num_courses):
 		new_course = Course()
 		new_course.name = str(random.randint(0, i)) + str(random.randint(0, j))
 		new_course.marks = 100 * random.randint(0, j) / num_courses
-		new_student.courses.append(Course)
+		new_student.courses.append(new_course)
 	return new_student
 
 

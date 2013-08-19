@@ -11,7 +11,7 @@ import exec_thrift
 if __name__ == '__main__':
 	num_students = 100 * 1000
 	num_courses = 5
-	assert len(sys.argv) >= 1
+	assert len(sys.argv) >= 1, 'Please pass pickle, proto or thrift as second argument.'
 	class_to_test = sys.argv[1]
 	if class_to_test == 'proto':
 		getNewStudent = exec_proto_buf.getNewStudent

@@ -1,0 +1,20 @@
+~/src/benchmarking/serialization $ time python main.py pickle
+Created 100000 students, length 30093 KiB
+
+real	0m10.902s
+user	0m10.832s
+sys	0m0.052s
+~/src/benchmarking/serialization $ time python main.py proto
+Created 100000 students, length 7946 KiB
+
+real	0m21.723s
+user	0m21.516s
+sys	0m0.184s
+~/src/benchmarking/serialization $ time python main.py thrift
+Created 100000 students, length 15023 KiB
+
+real	0m15.904s
+user	0m15.772s
+sys	0m0.120s
+~/src/benchmarking/serialization $ 
+
