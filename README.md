@@ -1,4 +1,4 @@
 benchmarking
 ============
 
-Benchmarking of random libraries
+Unscientific benchmarking of random libraries.
