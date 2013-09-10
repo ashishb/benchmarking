@@ -1,5 +1,6 @@
 import random
 
+from google.protobuf import text_format
 # This was generated using
 # protoc student.proto --python_out=.
 from student_pb2 import Student
@@ -25,4 +26,14 @@ def serialize(student):
 def deserialize(serialized_student):
 	student = Student()
 	student.ParseFromString(serialized_student)
+	return student
+
+
+def humanReadableSerialize(student):
+	return text_format.MessageToString(student)
+
+
+def humanReadableDeserialize(serialized_student):
+	student = Student()
+	text_format.Merge(serialized_student, student)
 	return student

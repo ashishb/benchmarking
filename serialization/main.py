@@ -25,11 +25,17 @@ if __name__ == '__main__':
 		getNewStudent = exec_pickle.getNewStudent
 		serialize = exec_pickle.serialize
 		deserialize = exec_pickle.deserialize
+	elif class_to_test == 'hrproto':
+		getNewStudent = exec_proto_buf.getNewStudent
+		serialize = exec_proto_buf.humanReadableSerialize
+		deserialize = exec_proto_buf.humanReadableDeserialize
 	else:
-		print 'ERROR'
+		print 'unrecognized argument.'
 		sys.exit(1)
 	
 
-	students, serialized_length = common.createStudents(num_students, num_courses, getNewStudent, serialize)
+	students, serialized_length = common.createStudents(
+			num_students, num_courses, getNewStudent, serialize)
 	common.getStudents(students, deserialize)
-	print 'Created %d students, length %d KiB' % (len(students), serialized_length/1024)
+	print 'Created %d students, length %d KiB' % (
+			len(students), serialized_length/1024)
